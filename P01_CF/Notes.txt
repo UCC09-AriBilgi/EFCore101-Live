@@ -1,0 +1,2 @@
+﻿- Öncelikle
+- Eğer bir Entity yapısını kullanmak istiyorsak nuget package managerdan ilgili library leri proje katıştırılması lazım
