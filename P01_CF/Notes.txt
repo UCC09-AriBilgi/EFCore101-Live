@@ -10,5 +10,8 @@ Yani benim şu an bir DB yok. Bu dbyi ben code tarafından yaratacağım.
 
 - EF library lerini kurduktan sonra yapmamız gerekenler var
 	* sql tarafında olan db nin görünümünü projeme dahil etmem gerekiyor. (DbContext)
+	* Yapmış olduğumuz tablo tasarımları DB de böyle olacak türünden projeye anlatabilmemiz için Nuget Package Manager'dan PM>add-migration CreateEF101Db diyerek yani migration a bir isim vererek çalıştırıyoruz. Bunun sonucunda proje yapımız içersine Migration isimli bir bolum ekleniyor otomatik olarak ve bunun içinde de benim tanımlarım var.
+	* Fakat bu işlemi yaptıktan sonra bir bakıyoruz ki sql tarafında DB oluşmamış.
+	* Nedennn : Çünkü gerekli olan bir konmutu çalıştırmamışız..PM>update-database -verbose 
 
 

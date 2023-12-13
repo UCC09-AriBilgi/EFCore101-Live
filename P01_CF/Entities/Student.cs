@@ -8,7 +8,7 @@ namespace P01_CF.Entities
         // Data Annotations
         [Column(TypeName ="NVarchar(20)")]
         public string SFName { get; set;}
-        [Column(TypeName = "NVarchar(20)")]
+        [Column(TypeName = "NVarchar(30)")]
         public string SLastName { get; set;}
         public DateTime SDoB {  get; set;} // Student Date of Birth
         // Relational Definitions

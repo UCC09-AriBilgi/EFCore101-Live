@@ -8,17 +8,23 @@ namespace P01_CF.Data
         // constructor yaratılacak : Code snippet ctor(constructor)
         public StudentDbContext(DbContextOptions options) : base(options)
         {
-                
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // tüm context ile ilgili gerekiyorsa konfigüre işlemleri için yazılacak kodlar bölümü
+            // Database Connection String Konfigure etme
+            //optionsBuilder.UseSqlServer();
+
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // burası modellerimiz yaratılırken eğer yapılacak işlem varsa buraya yazılır..
+
+
         }
 
 

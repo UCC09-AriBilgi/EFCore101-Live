@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using P01_CF.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Dependency Injection
+// Database iþlemleri için 
+builder.Services.AddDbContext<StudentDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
+
 
 var app = builder.Build();
 
