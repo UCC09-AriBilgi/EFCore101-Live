@@ -11,11 +11,16 @@ namespace P01_CF.Data
 
         }
 
+        public StudentDbContext()
+        {
+
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // tüm context ile ilgili gerekiyorsa konfigüre işlemleri için yazılacak kodlar bölümü
             // Database Connection String Konfigure etme
-            //optionsBuilder.UseSqlServer();
+            optionsBuilder.UseSqlServer();
 
 
         }
