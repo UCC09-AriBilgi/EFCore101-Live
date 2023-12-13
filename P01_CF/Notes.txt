@@ -1,2 +1,14 @@
 ﻿- Öncelikle
 - Eğer bir Entity yapısını kullanmak istiyorsak nuget package managerdan ilgili library leri proje katıştırılması lazım
+	Microsoft.EntityFrameworkCore
+	Microsoft.EntityFrameworkCore.Design
+	Microsoft.EntityFrameworkCore.SqlServer
+	Microsoft.EntityFrameworkCore.Tools
+
+CF yaklaşımı
+Yani benim şu an bir DB yok. Bu dbyi ben code tarafından yaratacağım.
+
+- EF library lerini kurduktan sonra yapmamız gerekenler var
+	* sql tarafında olan db nin görünümünü projeme dahil etmem gerekiyor. (DbContext)
+
+
