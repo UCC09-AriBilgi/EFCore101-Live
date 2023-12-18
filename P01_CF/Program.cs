@@ -1,6 +1,9 @@
+using Bogus;
 using Microsoft.EntityFrameworkCore;
 using P01_CF.Data;
 using P01_CF.Entities;
+
+using Person = P01_CF.Entities.Person;
 
 internal class Program
 {
@@ -15,26 +18,30 @@ internal class Program
         // Database iþlemleri için 
         builder.Services.AddDbContext<StudentDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
-        // Sample Data ??????
-        //var context = new StudentDbContext();
+        //// Sample Data ??????
+        //Faker<Person> fakerPerson; // Bogus'un Faker isimli classý
 
-        //try
+        //var personList = new List<Person>();
+
+
+        //for (int i = 1; i <= 10; i++)
         //{
-        //    var student = new Student()
-        //    {
-        //        SFName = "Ümit",
-        //        SLastName = "KARAÇÝVÝ"
-        //    };
+        //    fakerPerson = new Faker<Person>()
+        //        .RuleFor(p => p.PersonId, fd => fd.Random.Int(1, 200))
+        //        .RuleFor(p => p.PFName, fd => fd.Name.FirstName())
+        //        .RuleFor(p => p.PLName, fd => fd.Name.LastName())
+        //        .RuleFor(p => p.PEMail, fd => fd.Internet.Email())
+        //        .RuleFor(p => p.PPhone, fd => fd.Phone.PhoneNumber())
+        //        .RuleFor(p => p.PAddress, fd => fd.Address.StreetAddress())
+        //        .RuleFor(p => p.PPostCode, fd => fd.Address.ZipCode())
+        //        .RuleFor(p => p.PCity, fd => fd.Address.City())
+        //        .RuleFor(p => p.PGender, fd => fd.PickRandom<GenderEnum>());
 
-        //    context.Students.Add(student);
-        //    context.SaveChanges();
+        //    var person = fakerPerson.Generate();
+        //    personList.Add(person);
 
         //}
-        //catch (Exception)
-        //{
 
-        //    throw;
-        //}
 
 
         var app = builder.Build();

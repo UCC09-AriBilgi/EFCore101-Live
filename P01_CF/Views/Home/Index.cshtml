@@ -1,8 +1,36 @@
-﻿@{
+﻿@model List<P01_CF.Entities.Person>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">OUR PERSON LIST</h1>
+    <hr />
+    <br />
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>EMail</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>PostCode</th>
+            <th>City</th>
+            <th>Gender</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PersonId</td>
+                <td>@item.PGender</td>
+
+            </tr>
+        }
+    </table>
 </div>
