@@ -14,4 +14,8 @@ Yani benim şu an bir DB yok. Bu dbyi ben code tarafından yaratacağım.
 	* Fakat bu işlemi yaptıktan sonra bir bakıyoruz ki sql tarafında DB oluşmamış.
 	* Nedennn : Çünkü gerekli olan bir konmutu çalıştırmamışız..PM>update-database -verbose 
 
+18.12.2023
+- DataContext ve Entity leri biraz değiştirelim
+- Fake(Dummy) Data Generator - Bogus Package...Hayali veri üreteci
+
 
