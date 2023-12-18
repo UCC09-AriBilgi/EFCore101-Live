@@ -18,4 +18,7 @@ Yani benim şu an bir DB yok. Bu dbyi ben code tarafından yaratacağım.
 - DataContext ve Entity leri biraz değiştirelim
 - Fake(Dummy) Data Generator - Bogus Package...Hayali veri üreteci
 
+Fake data için kullanılan nuget package - Bogus isimli package. Öncelikle onu projeye dahil ediyoruz.
+. Bogus paketini kullacak şekilde bir veri üreteci sınıfı / classı yaratalım
+
 

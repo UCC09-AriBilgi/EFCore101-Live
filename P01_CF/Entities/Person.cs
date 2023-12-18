@@ -9,6 +9,7 @@
         public string PPhone { get; set; }  
         public string PAddress { get; set; }  
         public string PPostCode { get; set; }  
-        public string PCity { get; set; }  
+        public string PCity { get; set; }
+        public GenderEnum PGender { get; set; }
     }
 }

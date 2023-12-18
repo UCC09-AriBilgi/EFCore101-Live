@@ -36,6 +36,10 @@ namespace P01_CF.Data
         // Sınıflarımızı DbSet olarak tanımlıyoruz...DbSet <--> table(db tarafındaki)
         public DbSet<Student> Students { get; set; }
         public DbSet<Standard> Standards { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        
+
+
 
 
 
