@@ -26,6 +26,9 @@ namespace P02_CF_DbRelations.Models
 
         public virtual City Cities { get; set; } // <-- City class
 
+        public ICollection<Order> Orders { get; set; } // -->Order tablosunu besliyor
+
+
 
     }
 }

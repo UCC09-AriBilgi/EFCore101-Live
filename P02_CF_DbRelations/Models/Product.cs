@@ -17,6 +17,9 @@ namespace P02_CF_DbRelations.Models
 
         public virtual Category Categories { get; set; } // <-- Category besliyor
 
+        public ICollection<Order> Orders { get; set; } // -->Order tablosunu besliyor
+
+
 
     }
 }
