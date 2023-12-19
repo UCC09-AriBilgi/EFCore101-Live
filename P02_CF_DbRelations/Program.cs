@@ -10,6 +10,22 @@ builder.Services.AddControllersWithViews();
 // Database iþlemleri için --> appsettings.json dan okudu
 builder.Services.AddDbContext<CFDbRelationContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
+#region Fake Data Generation
+// Definitions
+builder.Services.AddTransient<CityDG>();
+builder.Services.AddTransient<AdSoyadDG>();
+
+
+// Calling
+AdSoyadDG adsoyadDG = new AdSoyadDG();
+adsoyadDG.Generate(5);
+
+
+//CityDG cityDG = new CityDG();
+//cityDG.Generate(5);
+
+
+#endregion
 
 
 var app = builder.Build();

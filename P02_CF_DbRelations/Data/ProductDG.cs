@@ -26,7 +26,7 @@ namespace P02_CF_DbRelations.Data
             {
                 var product = fakerProduct.Generate();
 
-                Products.Add(product); // Product yaratıldı...
+                //Products.Add(product); // Product yaratıldı...
             }
         }
     }

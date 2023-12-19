@@ -23,5 +23,7 @@ namespace P02_CF_DbRelations.Data
         public virtual DbSet<Personel> Personels { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
 
+        public virtual DbSet<AdSoyad> AdSoyad { get; set; }
+
     }
 }

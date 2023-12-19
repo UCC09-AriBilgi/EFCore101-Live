@@ -14,6 +14,8 @@ namespace P02_CF_DbRelations.Data
         {
             fakerCity = new Faker<City>("tr"); // local ülke parametresi
 
+
+            fakerCity.RuleFor(c => c.CityID, cd => cd.Random.Int(1,81));
             fakerCity.RuleFor(c => c.CityName, cd => cd.Address.City());
         }
 
