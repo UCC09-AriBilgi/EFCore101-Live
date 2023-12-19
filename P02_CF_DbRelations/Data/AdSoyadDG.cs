@@ -8,12 +8,14 @@ namespace P02_CF_DbRelations.Data
     {
         Faker<AdSoyad> fakerAdSoyad;
 
-        public DbSet<AdSoyad> AdSoyads { get; set; } // City sınıfından Cities isimli bir tabloyu ifade ediyor.
+        //public DbSet<AdSoyad> AdSoyads { get; set; } // City sınıfından Cities isimli bir tabloyu ifade ediyor.
+        public List<AdSoyad> AdSoyads { get; set; } // City sınıfından Cities isimli bir tabloyu ifade ediyor.
 
         public AdSoyadDG()
         {
             fakerAdSoyad = new Faker<AdSoyad>("tr"); // tr --> local ülke parametresi
 
+            fakerAdSoyad.RuleFor(c => c.Id, cd => cd.Random.Int(1,10));
             fakerAdSoyad.RuleFor(c => c.Ad, cd => cd.Person.FirstName);
             fakerAdSoyad.RuleFor(c => c.Soyad, cd => cd.Person.LastName);
         }
@@ -26,7 +28,7 @@ namespace P02_CF_DbRelations.Data
             {
                 var adsoyad = fakerAdSoyad.Generate();
 
-                //Products.Add(product); // Product yaratıldı...
+                AdSoyads.Add(adsoyad); // Product yaratıldı...
             }
         }
     }

@@ -5,6 +5,8 @@ namespace P02_CF_DbRelations.Models
 {
     public class AdSoyad
     {
+        [Key]
+        public int Id { get; set; }
 
         public string Ad { get; set; }
 

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using P02_CF_DbRelations.Data;
 
@@ -10,9 +11,10 @@ using P02_CF_DbRelations.Data;
 namespace P02_CF_DbRelations.Migrations
 {
     [DbContext(typeof(CFDbRelationContext))]
-    partial class CFDbRelationContextModelSnapshot : ModelSnapshot
+    [Migration("20231219114201_UpdateNewTable")]
+    partial class UpdateNewTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
