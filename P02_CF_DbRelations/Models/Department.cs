@@ -12,6 +12,9 @@ namespace P02_CF_DbRelations.Models
         [Required(ErrorMessage = "Departman adı gerekli bilgidir..")]
         [StringLength(30, ErrorMessage = "Departman adı max.30 karakterdir...")]
         [Display(Name = "Departman Adı")]
-        public string DepartmentName { get; set; } 
+        public string DepartmentName { get; set; }
+
+        public ICollection<Personel> Personels { get; set; } // -->Personel tablosunu besliyor
+
     }
 }

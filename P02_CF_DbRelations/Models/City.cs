@@ -13,5 +13,7 @@ namespace P02_CF_DbRelations.Models
         [StringLength(20, ErrorMessage = "Şehir adı max.20 karakterdir...")]
         [Display(Name = "Şehir Adı")]
         public string CityName { get; set; }
+
+        public ICollection<Personel> Personels { get; set; } // -->Personel tablosunu besliyor
     }
 }

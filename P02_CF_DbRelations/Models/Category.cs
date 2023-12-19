@@ -20,5 +20,7 @@ namespace P02_CF_DbRelations.Models
         [Display(Name ="Kategori Adı")]
         public string CategoryName { get; set; }
 
+        public ICollection<Product> Products { get; set; } // -->Product tablosunu besliyor
+
     }
 }
