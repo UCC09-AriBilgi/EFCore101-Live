@@ -1,0 +1,24 @@
+﻿- Öncelikle
+- Eğer bir Entity yapısını kullanmak istiyorsak nuget package managerdan ilgili library leri proje katıştırılması lazım
+	Microsoft.EntityFrameworkCore
+	Microsoft.EntityFrameworkCore.Design
+	Microsoft.EntityFrameworkCore.SqlServer
+	Microsoft.EntityFrameworkCore.Tools
+
+CF yaklaşımı
+Yani benim şu an bir DB yok. Bu dbyi ben code tarafından yaratacağım.
+
+- EF library lerini kurduktan sonra yapmamız gerekenler var
+	* sql tarafında olan db nin görünümünü projeme dahil etmem gerekiyor. (DbContext)
+	* Yapmış olduğumuz tablo tasarımları DB de böyle olacak türünden projeye anlatabilmemiz için Nuget Package Manager'dan PM>add-migration CreateEF101Db diyerek yani migration a bir isim vererek çalıştırıyoruz. Bunun sonucunda proje yapımız içersine Migration isimli bir bolum ekleniyor otomatik olarak ve bunun içinde de benim tanımlarım var.
+	* Fakat bu işlemi yaptıktan sonra bir bakıyoruz ki sql tarafında DB oluşmamış.
+	* Nedennn : Çünkü gerekli olan bir konmutu çalıştırmamışız..PM>update-database -verbose 
+
+18.12.2023
+- DataContext ve Entity leri biraz değiştirelim
+- Fake(Dummy) Data Generator - Bogus Package...Hayali veri üreteci
+
+Fake data için kullanılan nuget package - Bogus isimli package. Öncelikle onu projeye dahil ediyoruz.
+. Bogus paketini kullacak şekilde bir veri üreteci sınıfı / classı yaratalım
+
+
