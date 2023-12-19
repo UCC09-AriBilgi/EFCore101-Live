@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using P02_CF_DbRelations.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Dependency Injection
+// Database iþlemleri için --> appsettings.json dan okudu
+builder.Services.AddDbContext<CFDbRelationContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
+
 
 var app = builder.Build();
 
